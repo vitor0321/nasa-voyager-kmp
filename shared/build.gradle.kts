@@ -34,9 +34,9 @@ kotlin {
 }
 
 android {
-    namespace = "com.walcker.nasa_voyager"
-    compileSdk = 34
+    namespace = libs.versions.namespace.get()
+    compileSdk = libs.versions.targetSdk.get().toInt()
     defaultConfig {
-        minSdk = 24
+        minSdk = libs.versions.minSdk.get().toInt()
     }
 }

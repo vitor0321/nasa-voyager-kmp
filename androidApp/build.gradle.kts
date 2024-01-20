@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.walcker.nasa_voyager.android"
-    compileSdk = 34
+    namespace = libs.versions.namespace.get()
+    compileSdk = libs.versions.targetSdk.get().toInt()
     defaultConfig {
-        applicationId = "com.walcker.nasa_voyager.android"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "24.0.1"
+        applicationId = libs.versions.namespace.get()
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionName.get()
     }
     buildFeatures {
         compose = true
