@@ -1,15 +1,13 @@
 plugins {
-    kotlin("plugin.serialization")
-    id("co.stone.plugins.multiplatform")
-    id("co.stone.plugins.publish")
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.androidLibrary)
 }
 
 kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget =  JavaVersion.VERSION_1_8.toString()
             }
         }
     }

@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "nasa_voyager"
+rootProject.name = "Nasa_Voyager"
 include(":androidApp")
 include(":shared")
