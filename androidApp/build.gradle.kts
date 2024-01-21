@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.ksp)
+    id("de.jensklingenberg.ktorfit") version "1.10.1"
 }
 
 android {
@@ -44,5 +46,25 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
+
+    implementation(libs.kodein.android)
+    implementation(libs.kodein.conf)
+    implementation(libs.kodein.core)
+
+    implementation(libs.voyager.navigator)
+    implementation(libs.voyager.bottom.sheet)
+    implementation(libs.voyager.tab)
+    implementation(libs.voyager.transitions)
+    implementation(libs.voyager.androidx)
+    implementation(libs.voyager.livedata)
+    implementation(libs.voyager.kodein)
+
+    implementation(libs.kotlin.serialization.json)
+
+    implementation(libs.lyricist)
+//    ksp(libs.lyricist.processor)
+
+    implementation(libs.ktorfit.ksp)
+
     debugImplementation(libs.compose.ui.tooling)
 }

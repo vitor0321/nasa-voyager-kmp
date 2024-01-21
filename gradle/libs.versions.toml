@@ -1,29 +1,69 @@
 [versions]
-namespace= "com.walcker.nasa_voyager.android"
-versionName = "24.1"
-minSdk = "24"
-targetSdk = "34"
-versionCode = "1"
-compose-compiler = "1.5.4"
+namespace                   = "com.walcker.nasa_voyager.android"
+versionName                 = "24.1"
+minSdk                      = "24"
+targetSdk                   = "34"
+versionCode                 = "1"
+compose-compiler            = "1.5.4"
 
-agp = "8.2.1"
-kotlin = "1.9.20"
-compose = "1.5.4"
-compose-material3 = "1.1.2"
-androidx-activityCompose = "1.8.2"
+agp                         = "8.2.1"
+kotlin                      = "1.9.20"
+compose                     = "1.5.4"
+compose-material3           = "1.1.2"
+androidx-activityCompose    = "1.8.2"
+kotlin-serialization        = "1.5.1"
+square-sqlDelight           = "2.0.0-alpha04"
+
+ksp                         = "1.8.20-1.0.11"
+ktorfit                     = "1.10.1"
+kodein                      = '7.20.1'
+voyager                     = '1.0.0-rc06'
+lyricist                    = '1.6.2-1.8.20'
+lyricist-debug              = '1.2.2'
+
+plugin-detekt               = "1.22.0"
+plugin-kmp-nativecoroutines = "1.0.0-ALPHA-7"
 
 [libraries]
-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
-compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+kotlin-test                 = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+androidx-activity-compose   = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-ui                  = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-tooling          = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview  = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-foundation          = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3           = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+
+plugin-ksp                  = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
+kodein-android              = { module = "org.kodein.di:kodein-di-framework-android-x", version.ref = "kodein" }
+kodein-conf                 = { module = "org.kodein.di:kodein-di-conf", version.ref = "kodein" }
+kodein-core                 = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
+
+voyager-navigator           = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-bottom-sheet        = { module = "cafe.adriel.voyager:voyager-bottom-sheet-navigator", version.ref = "voyager" }
+voyager-tab                 = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
+voyager-transitions         = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+voyager-androidx            = { module = "cafe.adriel.voyager:voyager-androidx", version.ref = "voyager" }
+voyager-livedata            = { module = "cafe.adriel.voyager:voyager-livedata", version.ref = "voyager" }
+voyager-kodein              = { module = "cafe.adriel.voyager:voyager-kodein", version.ref = "voyager" }
+
+lyricist                    = { module = "cafe.adriel.lyricist:lyricist", version.ref = "lyricist" }
+lyricist-processor          = { module = "cafe.adriel.lyricist:lyricist-processor", version.ref = "lyricist" }
+
+kotlin-serialization-core   = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlin-serialization" }
+kotlin-serialization-json   = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin-serialization" }
+ktorfit                     = { module = "de.jensklingenberg.ktorfit:ktorfit-lib-light", version.ref = "ktorfit" }
+ktorfit-ksp                 = { module = "de.jensklingenberg.ktorfit:ktorfit-ksp", version.ref = "ktorfit" }
 
 [plugins]
-androidApplication = { id = "com.android.application", version.ref = "agp" }
-androidLibrary = { id = "com.android.library", version.ref = "agp" }
-kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+androidApplication          = { id = "com.android.application", version.ref = "agp" }
+androidLibrary              = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid               = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform         = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinCocoapods             = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+ksp                         = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+sqldelight                  = { id = "app.cash.sqldelight", version.ref = "square-sqlDelight" }
+detekt                      = { id = "io.gitlab.arturbosch.detekt", version.ref = "plugin-detekt" }
+kmpNativeCoroutines         = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "plugin-kmp-nativecoroutines" }
+ktor                        = { id = "de.jensklingenberg.ktorfit", version = "1.0.0"}
